@@ -1,0 +1,33 @@
+/* Nesting */
+@import "colors.scss";
+
+/* SCSS */
+
+nav {
+    font: {
+        size: 1em;
+        font-weight: bold;
+        
+    }
+    float: left;
+    width:100%;
+    ul {
+        list-style-type: none;
+        li {
+            float: left;
+            margin: 0 5px 0 0;
+            color: $color4;
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+            }
+            color: $color4;
+        }
+    }
+}
+    ul.register {
+        float: right;
+        margin-top:5px;
+    }
+}

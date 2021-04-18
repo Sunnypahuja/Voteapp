@@ -1,0 +1,38 @@
+extends layout
+
+block content
+    section.my-errors
+        -data = data || {}
+
+        if errors
+            ul
+            for error in errors
+                li= error.msg
+        h2.text
+                b Register to subscribe
+        form(action="." method="POST" class="form-registration")
+            label(for="name") Name:
+            br
+            input(
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                value=data.name
+            )
+            br
+            label(for="email") Email:
+            br
+            input(
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                value=data.email
+            )
+            br
+            input(
+                type="submit" 
+                value="Register"
+                class="submit-button"
+            )

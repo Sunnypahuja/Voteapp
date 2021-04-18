@@ -1,0 +1,34 @@
+doctype html
+html
+  head
+    title= `${title}`
+    //- link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(rel='StyleSheet' href='css/styles.css' type='text/css')
+    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
+    link(rel='StyleSheet' href='css/form.css' type='text/css')
+script(src='script.js')
+header
+    nav
+      ul
+        li
+          a(href='/') Home
+        li |
+        li
+          a(href='#') Blog
+      ul.register
+        li
+          a(href='form') Register
+body
+  div.container.listing-reg
+main
+  section#intro-text
+    span Simple Kitchen
+    h5 
+      | Simple &amp; Comforting 
+      br
+      |             Recipes All Year Round
+  block content
+footer
+  | &copy; Copyright 2021
+      
