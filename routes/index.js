@@ -12,15 +12,19 @@ const basic = auth.basic({
 
 router.get('/', (req, res) => {
   //res.send('It works!');
-  res.render('user', { title: 'Front page' });
+  res.render('index', { title: 'Front page' });
 });
 router.get('/errorlogin', (req, res) => {
   //res.send('It works!');
   res.render('errorlogin', { title: 'Front page' });
 });
+router.get('/admin', (req, res) => {
+  //res.send('It works!');
+  res.render('admin', { title: 'Front page' });
+});
 
 router.post(
-  '/user',
+  '/admin',
   passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/errorlogin',

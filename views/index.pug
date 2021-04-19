@@ -1,34 +1,76 @@
 doctype html
+// Mirrored from codervent.com/syndash/demo/vertical/authentication-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 17:27:20 GMT
 head
-  link(rel='preconnect' href='https://fonts.gstatic.com')
-  link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap' rel='stylesheet')
-  link(rel='StyleSheet' href='css/styles.css' type='text/css')
-  script(src='script.js')
-  header
-    nav
-      ul
-        li
-          a(href='/') Home
-        li |
-        li
-          a(href='#') Blog
-      ul.register
-        li
-          a(href='form') Register
-  main
-    section#intro-text
-      span Simple Kitchen
-      h5 
-        | Simple &amp; Comforting 
-        br
-        |             Recipes All Year Round
-      p Pan-seared chicken, Grill shrimp, mac &amp; cheese&mdash;need we say more?
-      //
-        <p class="success">SUCCESS</p>
-        <p class="error">ERROR</p>
-        <p class="warning">WARNING</p>
-      button.submit-button View Recipes
-    section#intro-image
-      img(src='images/louisiana-barbecued-shrimp.webp' alt='Louisiana Barbecued Shrimp')
-  footer
-    | &copy; Copyright 2021
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title Voting Site
+  // favicon
+  link(rel='icon' href='assets/images/favicon-32x32.png' type='image/png')
+  // loader
+  link(href='assets/css/pace.min.css' rel='stylesheet')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='assets/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto&display=swap')
+  // Icons CSS
+  link(rel='stylesheet' href='assets/css/icons.css')
+  // App CSS
+  link(rel='stylesheet' href='assets/css/app.css')
+  style.
+// wrapper
+.wrapper
+  .section-authentication-login.d-flex.align-items-center.justify-content-center
+    .row(style='width:75%')
+      .col-12.col-lg-12.mx-auto
+        .card.radius-15
+          .row.no-gutters
+            .col-lg-6
+              .card-body.p-md-5
+                .text-center
+                  img(src='assets/images/logo-icon.png' width='80' alt='')
+                  h3.mt-4.font-weight-bold Welcome
+                //
+                  <div class="input-group shadow-sm rounded mt-5">
+                  <div class="input-group-prepend">	<span class="input-group-text bg-transparent border-0 cursor-pointer"><img src="assets/images/icons/search.svg" alt="" width="16"></span>
+                  </div>
+                  <input type="button" class="form-control  border-0" value="Log in with google">
+                  </div>
+                .login-separater.text-center
+                  span  LOGIN TO VOTE
+                  hr
+                .form-group.mt-4
+                  label Username
+                  input.form-control(type='text' placeholder='Enter your Username')
+                .form-group
+                  label Password
+                  input.form-control(type='password' placeholder='Enter your password')
+                .form-row
+                  .form-group.col
+                    //
+                      <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                      <label class="custom-control-label" for="customSwitch1">Remember Me</label>
+                      </div>
+                  .form-group.col.text-right
+                    // <a href="authentication-forgot-password.html"><i class='bx bxs-key mr-2'></i>Forget Password?</a>
+                .btn-group.mt-3.w-100
+                  button.btn.btn-primary.btn-block(type='submit') Login
+                  button.btn.btn-primary(type='submit')
+                    i.lni.lni-arrow-right
+                hr
+                .text-center
+                  p.mb-0(style='display:flex;flex:1;justify-content: flex-start;')
+                    | Don&apos;t have an account? 
+                    a(href='form') Register
+                  p.mb-0(style='display:flex;flex:1;justify-content: flex-end;')
+                    | Admin  &nbsp;
+                    a(href='admin')  Login Here
+            .col-lg-6
+              img#loginimage.card-img.login-img.h-100(src='assets/images/vote1.webp' alt='...' style='height: 70% !important;padding-top:130px')
+        footer
+        | &copy; Copyright 2021     
+    // end row
+// end wrapper
+// Mirrored from codervent.com/syndash/demo/vertical/authentication-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 17:27:20 GMT
+
+  

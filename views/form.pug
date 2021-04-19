@@ -1,38 +1,146 @@
-extends layout
-
-block content
-    section.my-errors
-        -data = data || {}
-
-        if errors
-            ul
-            for error in errors
-                li= error.msg
-        h2.text
-                b Register to subscribe
-        form(action="." method="POST" class="form-registration")
-            label(for="name") Name:
-            br
-            input(
-                type="text"
-                id="name"
-                name="name"
-                class="form-control"
-                value=data.name
-            )
-            br
-            label(for="email") Email:
-            br
-            input(
-                type="email"
-                id="email"
-                name="email"
-                class="form-control"
-                value=data.email
-            )
-            br
-            input(
-                type="submit" 
-                value="Register"
-                class="submit-button"
-            )
+doctype html
+// Mirrored from codervent.com/syndash/demo/vertical/authentication-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 17:27:20 GMT
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title Register To Vote
+  // favicon
+  link(rel='icon' href='assets/images/favicon-32x32.png' type='image/png')
+  // loader
+  link(href='assets/css/pace.min.css' rel='stylesheet')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='assets/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto&display=swap')
+  // Icons CSS
+  link(rel='stylesheet' href='assets/css/icons.css')
+  // App CSS
+  link(rel='stylesheet' href='assets/css/app.css')
+// wrapper
+.wrapper
+  .section-authentication-register.d-flex.align-items-center.justify-content-center
+    .row
+      .col-12.col-lg-10.mx-auto
+        .card.radius-15
+          .row.no-gutters
+            .col-lg-6
+              .card-body.p-md-5
+                .text-center
+                  img(src='assets/images/logo-icon.png' width='80' alt='')
+                  h3.mt-4.font-weight-bold Create an Account
+                .login-separater.text-center
+                  span  REGISTER
+                  hr
+                .form-row
+                  .form-group.col-md-6
+                    label First Name
+                    input.form-control(type='text' placeholder='')
+                  .form-group.col-md-6
+                    label Last Name
+                    input.form-control(type='text' placeholder='')
+                .form-row
+                  .form-group.col-md-6
+                    label UserName
+                    input.form-control(type='text' placeholder='')
+                  .form-group.col-md-6
+                    label Identification Number
+                    input.form-control(type='text' placeholder='ABC-1234567')
+                .form-group
+                  label Email Address
+                  .input-group
+                    input.form-control(type='Email' value='' placeholder='example@gmail.com')
+                .form-group
+                  label Password
+                  #show_hide_password.input-group
+                    input.form-control.border-right-0(type='password' value='')
+                    .input-group-append
+                      a.input-group-text.bg-transparent.border-left-0(href='javascript:;')
+                        i.bx.bx-hide
+                .form-row
+                  .form-group.col-md-6
+                    label Date Of Birth
+                    input#myDate.form-control(type='date' value='' placeholder='')
+                  .form-group.col-md-6
+                    label Phone Number
+                    input.form-control(type='text' placeholder='XXXXXXXXXX')
+                .form-group
+                  label City
+                  input.form-control(type='text' placeholder='')
+                .form-group
+                  label State
+                  select.form-control
+                    option(value='Select' selected='') -Select-
+                    option(value='Andhra Pradesh') Andhra Pradesh
+                    option(value='Andaman and Nicobar Islands') Andaman and Nicobar Islands
+                    option(value='Arunachal Pradesh') Arunachal Pradesh
+                    option(value='Assam') Assam
+                    option(value='Bihar') Bihar
+                    option(value='Chandigarh') Chandigarh
+                    option(value='Chhattisgarh') Chhattisgarh
+                    option(value='Dadar and Nagar Haveli') Dadar and Nagar Haveli
+                    option(value='Daman and Diu') Daman and Diu
+                    option(value='Delhi' ) Delhi
+                    option(value='Lakshadweep') Lakshadweep
+                    option(value='Puducherry') Puducherry
+                    option(value='Goa') Goa
+                    option(value='Gujarat') Gujarat
+                    option(value='Haryana') Haryana
+                    option(value='Himachal Pradesh') Himachal Pradesh
+                    option(value='Jammu and Kashmir') Jammu and Kashmir
+                    option(value='Jharkhand') Jharkhand
+                    option(value='Karnataka') Karnataka
+                    option(value='Kerala') Kerala
+                    option(value='Madhya Pradesh') Madhya Pradesh
+                    option(value='Maharashtra') Maharashtra
+                    option(value='Manipur') Manipur
+                    option(value='Meghalaya') Meghalaya
+                    option(value='Mizoram') Mizoram
+                    option(value='Nagaland') Nagaland
+                    option(value='Odisha') Odisha
+                    option(value='Punjab') Punjab
+                    option(value='Rajasthan') Rajasthan
+                    option(value='Sikkim') Sikkim
+                    option(value='Tamil Nadu') Tamil Nadu
+                    option(value='Telangana') Telangana
+                    option(value='Tripura') Tripura
+                    option(value='Uttar Pradesh') Uttar Pradesh
+                    option(value='Uttarakhand') Uttarakhand
+                    option(value='West Bengal') West Bengal
+                .form-group
+                  .custom-control.custom-checkbox
+                    input#customCheck1.custom-control-input(type='checkbox')
+                    label.custom-control-label(for='customCheck1') I read and agree to Terms &amp; Conditions
+                .btn-group.mt-3.w-100
+                  button.btn.btn-primary.btn-block(type='submit') Register
+                  button.btn.btn-primary(type='submit')
+                    i.lni.lni-arrow-right
+                hr
+                .text-center.mt-4
+                  p.mb-0
+                    | Already have an account? 
+                    a(href='/') Login
+            .col-lg-6
+              img.card-img.login-img.h-100(src='assets/images/login-images/register-frent-img.jpg' alt='...')
+          // end row
+// end wrapper
+// JavaScript
+// jQuery first, then Popper.js, then Bootstrap JS
+script(src='assets/js/jquery.min.js')
+script(src='assets/js/pace.min.js')
+// Password show & hide js
+script.
+  $(document).ready(function () {
+  $("#show_hide_password a").on('click', function (event) {
+  event.preventDefault();
+  if ($('#show_hide_password input').attr("type") == "text") {
+  $('#show_hide_password input').attr('type', 'password');
+  $('#show_hide_password i').addClass("bx-hide");
+  $('#show_hide_password i').removeClass("bx-show");
+  } else if ($('#show_hide_password input').attr("type") == "password") {
+  $('#show_hide_password input').attr('type', 'text');
+  $('#show_hide_password i').removeClass("bx-hide");
+  $('#show_hide_password i').addClass("bx-show");
+  }
+  });
+  });
+// Mirrored from codervent.com/syndash/demo/vertical/authentication-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 17:27:21 GMT
