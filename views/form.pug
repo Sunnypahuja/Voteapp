@@ -33,24 +33,24 @@ head
                   hr
                 .form-row
                   .form-group.col-md-6
-                    label First Name
+                    label(for="firstName") First Name
                     input.form-control(type='text' placeholder='')
                   .form-group.col-md-6
-                    label Last Name
+                    label(for="lastName") Last Name
                     input.form-control(type='text' placeholder='')
                 .form-row
                   .form-group.col-md-6
-                    label UserName
+                    label(for="username") UserName
                     input.form-control(type='text' placeholder='')
                   .form-group.col-md-6
-                    label Identification Number
+                    label(for ="id") Identification Number
                     input.form-control(type='text' placeholder='ABC-1234567')
                 .form-group
-                  label Email Address
+                  label(for="email") Email Address
                   .input-group
                     input.form-control(type='Email' value='' placeholder='example@gmail.com')
                 .form-group
-                  label Password
+                  label(for="password") Password
                   #show_hide_password.input-group
                     input.form-control.border-right-0(type='password' value='')
                     .input-group-append
@@ -58,16 +58,16 @@ head
                         i.bx.bx-hide
                 .form-row
                   .form-group.col-md-6
-                    label Date Of Birth
+                    label(for="dob") Date Of Birth
                     input#myDate.form-control(type='date' value='' placeholder='')
                   .form-group.col-md-6
-                    label Phone Number
+                    label(for="phone") Phone Number
                     input.form-control(type='text' placeholder='XXXXXXXXXX')
                 .form-group
-                  label City
+                  label(for="city") City
                   input.form-control(type='text' placeholder='')
                 .form-group
-                  label State
+                  label(for="state") State
                   select.form-control
                     option(value='Select' selected='') -Select-
                     option(value='Andhra Pradesh') Andhra Pradesh
@@ -111,9 +111,12 @@ head
                     input#customCheck1.custom-control-input(type='checkbox')
                     label.custom-control-label(for='customCheck1') I read and agree to Terms &amp; Conditions
                 .btn-group.mt-3.w-100
-                  button.btn.btn-primary.btn-block(type='submit') Register
-                  button.btn.btn-primary(type='submit')
-                    i.lni.lni-arrow-right
+                  a(href="thankyou").btn.btn-primary.btn-block Register
+                //-   input(
+                //- type="submit" 
+                //- value="Register"
+                //- class="submit-button"
+                //-   )
                 hr
                 .text-center.mt-4
                   p.mb-0

@@ -1,0 +1,79 @@
+doctype html
+// Mirrored from codervent.com/syndash/demo/vertical/authentication-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 17:27:20 GMT
+head
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  title Voting Site
+  // favicon
+  link(rel='icon' href='assets/images/favicon-32x32.png' type='image/png')
+  // loader
+  link(href='assets/css/pace.min.css' rel='stylesheet')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='assets/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Roboto&display=swap')
+  // Icons CSS
+  link(rel='stylesheet' href='assets/css/icons.css')
+  // App CSS
+  link(rel='stylesheet' href='assets/css/app.css')
+  style.
+    .upper{margin-bottom:0px}
+    .mb-4{
+    margin:20px;
+    }
+    #vote{width:75%;height:75%}
+    @media only screen and (max-width: 600px) {
+    .upper{margin-bottom:20px}
+    #vote{width:100%}
+    .card-text{display:none}
+    }
+// wrapper
+.wrapper
+  .section-authentication-login.d-flex.align-items-center.justify-content-center
+    #vote.row
+      .col-12.col-lg-12.mx-auto
+        .card.radius-15
+          .card-body
+            .card-title.upper
+              center
+                h4 Vote Your Choice
+            .row.no-gutters
+              .col-lg-6
+                center
+                  .card.border-primary.mb-4(style='max-width: 18rem;')
+                    .card-body.text-primary
+                      h5.card-title(style='font-size: 17px;') Bhartiya Janata Party (BJP)
+                      img(src='assets/bjp.png' alt='BJP' style='height:50%;width:50%;')
+                      p.card-text
+                        | The Bharatiya Janata Party is one of two major political parties in India, along with the Indian National Congress.
+                    .card-footer(style='background:transparent;')
+                      button.btn.btn-outline-primary.btn-block(style='border:0px') Vote BJP
+                  .card.border-success.mb-4(style='max-width: 18rem;')
+                    .card-body.text-success
+                      h5.card-title(style='font-size: 17px;') Indian National Congress (INC)
+                      img(src='assets/inc.png' alt='BJP' style='height:50%;width:50%;')
+                      p.card-text
+                        | The Indian National Congress is one of two major political parties in India, along with the Bharatiya Janata Party.
+                    .card-footer(style='background:transparent;')
+                      button.btn.btn-outline-success.btn-block(style='border:0px') Vote INC
+              .col-lg-6
+                center
+                  .card.border-warning.mb-4(style='max-width: 18rem;')
+                    .card-body.text-warning
+                      h5.card-title(style='font-size: 17px;') Aam Aadmi Party (AAP)
+                      img(src='assets/aap.png' alt='BJP' style='height:50%;width:50%;')
+                      p.card-text
+                        | Aam Aadmi Party is a political party in India, whose central policies include free electricity, water, healthcare and public transport.
+                    .card-footer(style='background:transparent;')
+                      button.btn.btn-outline-warning.btn-block(style='border:0px') Vote AAP
+                  .card.border-danger.mb-4(style='max-width: 18rem;')
+                    .card-body.text-danger
+                      h5.card-title(style='font-size: 17px;') Bhaujan Samaj Party (BSP)
+                      img(src='assets/bsp.png' alt='BJP' style='height:50%;width:50%;')
+                      p.card-text
+                        | The Bahujan Samaj Party is a national level political party in India that was formed to represent Bahujans, referring to SCs, STs, and OBCs.
+                    .card-footer(style='background:transparent;')
+                      button.btn.btn-outline-danger.btn-block(style='border:0px') Vote BSP
+            // end row
+// end wrapper
+// Mirrored from codervent.com/syndash/demo/vertical/authentication-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 17:27:20 GMT

@@ -39,11 +39,12 @@ head
                   span  LOGIN TO VOTE
                   hr
                 .form-group.mt-4
-                  label Username
-                  input.form-control(type='text' placeholder='Enter your Username')
+                  form(action='/index' method='POST')
+                    label Username
+                    input.form-control(type='text' placeholder='Enter your Username' required)
                 .form-group
                   label Password
-                  input.form-control(type='password' placeholder='Enter your password')
+                  input.form-control(type='password' placeholder='Enter your password' required)
                 .form-row
                   .form-group.col
                     //
@@ -54,9 +55,8 @@ head
                   .form-group.col.text-right
                     // <a href="authentication-forgot-password.html"><i class='bx bxs-key mr-2'></i>Forget Password?</a>
                 .btn-group.mt-3.w-100
-                  button.btn.btn-primary.btn-block(type='submit') Login
-                  button.btn.btn-primary(type='submit')
-                    i.lni.lni-arrow-right
+                  a(href="userpage").btn.btn-primary.btn-block Log In
+                  
                 hr
                 .text-center
                   p.mb-0(style='display:flex;flex:1;justify-content: flex-start;')
@@ -67,10 +67,8 @@ head
                     a(href='admin')  Login Here
             .col-lg-6
               img#loginimage.card-img.login-img.h-100(src='assets/images/vote1.webp' alt='...' style='height: 70% !important;padding-top:130px')
-        footer
-        | &copy; Copyright 2021     
-    // end row
+          footer
+        | &copy; Copyright 2021 
+        // end row
 // end wrapper
 // Mirrored from codervent.com/syndash/demo/vertical/authentication-login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 17 Mar 2021 17:27:20 GMT
-
-  
